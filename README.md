@@ -41,14 +41,16 @@ While working on the script, `npm run watch` recompiles on every save.
 | Path            | What it is                                                  |
 | --------------- | ----------------------------------------------------------- |
 | `index.html`    | The demo page: the cards and the comment-wrapped components |
-| `script.ts`     | The source code. This is the file to edit                   |
+| `script.ts`     | Finds, highlights and styles components                     |
+| `cards.ts`      | Makes the cards highlight their component on hover          |
 | `dist/`         | Compiled JavaScript loaded by the page. Generated, not in git |
 | `tsconfig.json` | TypeScript compiler settings                                |
 | `docs/`         | Longer notes on how the approach works                      |
 
 ## How the script is organised
 
-`script.ts` is split into four sections:
+The code is split into four parts. The first three are sections of `script.ts`
+and the last one is `cards.ts`:
 
 1. **Finding a component**: walks the page's comment nodes to find the opening
    comment, then collects every element up to the closing comment.

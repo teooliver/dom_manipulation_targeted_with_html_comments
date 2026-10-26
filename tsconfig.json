@@ -6,5 +6,5 @@
     "removeComments": false,
     "outDir": "dist"
   },
-  "files": ["script.ts"]
+  "files": ["script.ts", "cards.ts"]
 }

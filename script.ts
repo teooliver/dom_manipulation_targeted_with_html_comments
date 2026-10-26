@@ -170,28 +170,5 @@ function styleComponent(id: ComponentId, styles: Styles = {}): HTMLElement[] {
   return elements;
 }
 
-// ---------------------------------------------------------------------------
-// Component cards
-// ---------------------------------------------------------------------------
-
-// A card is any element with a data-component-id attribute:
-//
-//   <li class="card" data-component-id="abc">abc</li>
-//
-// Hovering a card highlights the component with that id
-function setUpComponentCards(): void {
-  const cards = document.querySelectorAll<HTMLElement>("[data-component-id]");
-
-  cards.forEach((card) => {
-    const id = card.dataset.componentId;
-    if (id === undefined) return;
-
-    card.addEventListener("mouseenter", () => highlightComponent(id));
-    card.addEventListener("mouseleave", removeHighlight);
-  });
-}
-
-setUpComponentCards();
-
 // Example
 // styleComponent("GaIIzybDxh75uy5Bh5K6U", { color: "tomato", fontFamily: "sans-serif" });
